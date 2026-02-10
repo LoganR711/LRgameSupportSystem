@@ -1,0 +1,28 @@
+# Protect support folder files
+# Place this in /public_html/support/.htaccess
+
+# Block access to log files
+<FilesMatch "\.(txt|log)$">
+    Require all denied
+</FilesMatch>
+
+# Specifically protect sensitive files
+<Files "contact_log.txt">
+    Require all denied
+</Files>
+
+<Files "contact_submissions.txt">
+    Require all denied
+</Files>
+
+<Files "debug_log.txt">
+    Require all denied
+</Files>
+
+# Prevent directory listing
+Options -Indexes
+
+# Disable access to hidden files (like .htaccess itself)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
