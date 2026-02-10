@@ -1,9 +1,6 @@
 <?php
 // Load configuration
-$config_file = '../config.js';
-$config_content = file_get_contents($config_file);
-// Extract reCAPTCHA secret key from config (you'll need to add this)
-// For now, define it here:
+
 define('RECAPTCHA_SECRET_KEY', '#################'); // Add your secret key here
 define('CONTACT_EMAIL', '###########@###.###'); // Your email
 define('SITE_NAME', '#######');
